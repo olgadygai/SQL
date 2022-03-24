@@ -1,8 +1,9 @@
---Таблица employees
---Создать таблицу employees
+--РўР°Р±Р»РёС†Р° employees
+--РЎРѕР·РґР°С‚СЊ С‚Р°Р±Р»РёС†Сѓ employees
 --id. serial,  primary key,
 --employee_name. Varchar(50), not null
---Наполнить таблицу employee 70 строками.
+--РќР°РїРѕР»РЅРёС‚СЊ С‚Р°Р±Р»РёС†Сѓ employee 70 СЃС‚СЂРѕРєР°РјРё.
+
 
 create table employees(
   id serial primary key,
@@ -81,11 +82,11 @@ values ('Torrey Weissnat'),
     ('Alisa Kovacek'),
     ('Vernie Stehr');
    
---Таблица salary
---Создать таблицу salary
+--Г’Г ГЎГ«ГЁГ¶Г  salary
+--Г‘Г®Г§Г¤Г ГІГј ГІГ ГЎГ«ГЁГ¶Гі salary
 -- id. Serial  primary key,
 -- monthly_salary. Int, not null
--- Наполнить таблицу salary 15 строками:
+-- ГЌГ ГЇГ®Г«Г­ГЁГІГј ГІГ ГЎГ«ГЁГ¶Гі salary 15 Г±ГІГ°Г®ГЄГ Г¬ГЁ:
 
     
 create table salary(
@@ -110,13 +111,13 @@ values (1000),
      (2300),
      (2400);
     
---Таблица employee_salary
---Создать таблицу employee_salary
+--Г’Г ГЎГ«ГЁГ¶Г  employee_salary
+--Г‘Г®Г§Г¤Г ГІГј ГІГ ГЎГ«ГЁГ¶Гі employee_salary
 --id. Serial  primary key,
 --employee_id. Int, not null, unique
 --salary_id. Int, not null
---Наполнить таблицу employee_salary 40 строками:
---в 10 строк из 40 вставить несуществующие employee_id   
+--ГЌГ ГЇГ®Г«Г­ГЁГІГј ГІГ ГЎГ«ГЁГ¶Гі employee_salary 40 Г±ГІГ°Г®ГЄГ Г¬ГЁ:
+--Гў 10 Г±ГІГ°Г®ГЄ ГЁГ§ 40 ГўГ±ГІГ ГўГЁГІГј Г­ГҐГ±ГіГ№ГҐГ±ГІГўГіГѕГ№ГЁГҐ employee_id   
      
  create table employee_salary(
   id serial primary key,
@@ -166,12 +167,12 @@ values (default, 5, 2),
      (default, 73, 1),
      (default, 39, 13);
      
---Таблица roles
---Создать таблицу roles
+--Г’Г ГЎГ«ГЁГ¶Г  roles
+--Г‘Г®Г§Г¤Г ГІГј ГІГ ГЎГ«ГЁГ¶Гі roles
 --id. Serial  primary key,
 --role_name. int, not null, unique
---Поменять тип столба role_name с int на varchar(30)
---Наполнить таблицу roles 20 строками:
+--ГЏГ®Г¬ГҐГ­ГїГІГј ГІГЁГЇ Г±ГІГ®Г«ГЎГ  role_name Г± int Г­Г  varchar(30)
+--ГЌГ ГЇГ®Г«Г­ГЁГІГј ГІГ ГЎГ«ГЁГ¶Гі roles 20 Г±ГІГ°Г®ГЄГ Г¬ГЁ:
     
  create table roles(
  	id serial primary key,
@@ -182,7 +183,7 @@ values (default, 5, 2),
 alter table roles
 alter column role_name type varchar(30);
 
--- с varchar на int
+-- Г± varchar Г­Г  int
 --alter table roles
 --alter column role_name type int using role_name :: integer;
 
@@ -208,12 +209,12 @@ values ('Junior Python Developer'),
 	   ('Middle Automation QA Engineer'),
 	   ('Senior Automation QA Engineer');
 	  
---Таблица roles_employee
---Создать таблицу roles_employee
+--Г’Г ГЎГ«ГЁГ¶Г  roles_employee
+--Г‘Г®Г§Г¤Г ГІГј ГІГ ГЎГ«ГЁГ¶Гі roles_employee
 --id. Serial  primary key,
---employee_id. Int, not null, unique (внешний ключ для таблицы employees, поле id)
---role_id. Int, not null (внешний ключ для таблицы roles, поле id)
---Наполнить таблицу roles_employee 40 строками:
+--employee_id. Int, not null, unique (ГўГ­ГҐГёГ­ГЁГ© ГЄГ«ГѕГ· Г¤Г«Гї ГІГ ГЎГ«ГЁГ¶Г» employees, ГЇГ®Г«ГҐ id)
+--role_id. Int, not null (ГўГ­ГҐГёГ­ГЁГ© ГЄГ«ГѕГ· Г¤Г«Гї ГІГ ГЎГ«ГЁГ¶Г» roles, ГЇГ®Г«ГҐ id)
+--ГЌГ ГЇГ®Г«Г­ГЁГІГј ГІГ ГЎГ«ГЁГ¶Гі roles_employee 40 Г±ГІГ°Г®ГЄГ Г¬ГЁ:
 	  
 	  
 create table roles_employee(
